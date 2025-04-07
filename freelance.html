@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        margin: 0;
+        font-family: 'Special Elite', cursive;
+        background-color: #333;
+        color: #fff;
+      }
+
+      h5 {
+        font-size: 75px;
+        color: black;
+        text-align: center;
+      }
+
+      h5::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+        height: 15%;
+        background: #20C20E;
+        filter: blur(50px);
+        z-index: -1;
+      }
+      
+      /* Navigation bar styles */
+      nav {
+        background-color: black;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline-block;
+      }
+
+      nav li a {
+        display: inline-block;
+        color: #20C20E;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav li a:hover {
+        background-color: #111;
+      }
+
+      /* Video Background Styles */
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Image Gallery Styles */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 90%;
+        max-width: 1200px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        }
+
+      .gallery img {
+        width: 100%;
+        height: 400px;
+        display: block;
+        object-fit: cover;
+        }
+
+      .gallery img.horizontal {
+        grid-column: span 2;
+        height: 400px;
+        object-fit: cover;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="/Videos/hacker_background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h5> Freelance Projects </h5>
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="Photos/freelance/art_quote.png" alt="Gallery Image">
+      <img src="Photos/freelance/Collage Art Effect.png" alt="Gallery Image" class="horizontal">
+      <img src="Photos/freelance/poster.png" alt="Gallery Image">
+      <img src="Photos/freelance/retro_futuristic.png" alt="Gallery Image">
+      <img src="Photos/freelance/scanline.png" alt="Gallery Image">
+      <img src="Photos/freelance/Watercolor.png" alt="Gallery Image" class="horizontal">
+      <img src="Photos/freelance/map.png" alt="Gallery Image">
+      <img src="Photos/freelance/Subscribe to our Email.png" alt="Gallery Image" class="horizontal">
+      <img src="Photos/freelance/Our Rebel.png" alt="Gallery Image" class="horizontal">
+      <img src="Photos/freelance/Halftone.png" alt="Gallery Image">
+      <img src="Photos/freelance/Orange Poster.png" alt="Gallery Image">
+      <img src="Photos/freelance/sunset.png" alt="Gallery Image">
+      <img src="Photos/freelance/Future Technology.png" alt="Gallery Image">
+      <img src="Photos/freelance/Website Page 1.png" alt="Gallery Image" class="horizontal">
+      <!-- Add more images as needed -->
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+

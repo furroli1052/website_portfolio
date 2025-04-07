@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Principle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        margin: 0;
+        font-family: 'Special Elite', cursive;
+        background-color: #333;
+        position: relative;
+        z-index: 0;
+      }
+      
+      p {
+        font-size: 10px;
+        margin: 0;
+        text-align: left;
+        margin-left: 100px;
+      }
+
+      h1 {
+        font-size: 150px;
+        color: #20C20E;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 75px;
+        color: black;
+        text-align: left;
+        margin-left: 400px;
+      }
+
+      h2::before {
+        content: "";
+        position: absolute;
+        top: 18%;
+        left: 20%;
+        width: 30%;
+        height: 6%;
+        background: #20C20E;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      h3 {
+        font-size: 40px;
+        text-align: center;
+        margin-left: -200px;
+      }
+
+      h4 {
+        font-size: 20px;
+        margin-top: -20px;
+        text-align: center;
+      }
+
+      h5 {
+        font-size: 75px;
+        color: black;
+        text-align: center;
+      }
+
+      h5::before {
+        content: "";
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        width: 30%;
+        height: 6%;
+        background: #20C20E;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      .top-column {
+        position: relative; /* Enables positioning for the pseudo-element */
+        width: 100%;
+        padding: 40px;
+        color: #20C20E;
+        text-align: center;
+        margin-top: 120px;
+        z-index: 1;
+      }
+      
+      /* Black Blurry Background */
+      .top-column::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 80%;
+        height: 100%;
+        transform: translateX(-50%);
+        background: black;
+        filter: blur(100px);
+        z-index: -1;
+      }
+
+      /* Navigation bar styles */
+      nav {
+        background-color: black;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline-block;
+      }
+
+      nav li a {
+        display: inline-block;
+        color: #20C20E;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav li a:hover {
+        background-color: #111;
+      }
+
+      .container,
+      .container2 {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+      }
+
+      .container2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+      
+      .project_description,
+      .project_description2,
+      .project_display,
+      .project_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+        min-height: 300px;
+        color: #20C20E;
+      }
+
+      .project_description::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        transform: translateX(-120%);
+        background: black;
+        filter: blur(100px);
+        z-index: -1;
+      }
+
+      .project_description2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 65%;
+        width: 50%;
+        height: 100%;
+        transform: translateX(-20%);
+        background: black;
+        filter: blur(100px);
+        z-index: -1;
+      }
+      
+      .project_title {
+        font-size: 50px;
+        color: #FFFFFF;
+        width: 333px;
+        height: 200px;
+        background-color: transparent;
+        position: fixed;
+        top: 12%;
+        left: 20%;
+        transform: rotate(3deg);
+      }
+
+      .project-btn {
+        background-color: #20C20E;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      .project-btn:hover {
+        color: #20C20E;
+        background-color: #111;
+      }
+
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .middle-column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;                         
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;              
+      }
+
+      .middle-column {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.middle-column img {
+  max-width: 400px; /* Limits the image width */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+      /* Responsive adjustments for mobile view */
+      @media (max-width: 768px) {
+        .container,
+        .container2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="/Videos/hacker_background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="top-column">
+      <h1>Main Idea</h1>
+      <h4> An invisible thread weaves through time and space, </h4>
+      <h4> binding two souls destined to meet.  No matter how far they wander</h4>
+      <h4> or how many obstacles arise, their paths will cross, drawn together </h4>
+      <h4> by a connection written in the fabric of destiny itself. </h4>
+    </div>
+
+    <div>
+      <h2>Process</h2>
+    </div>
+
+    <div class="container">
+      <div class="project_description">
+        <h3>Step 1</h3>
+        <p>
+          ---------------------------------
+          </p> 
+        <p>
+            In this project, I was given the task to 
+            create a diptych poster using photos 
+            I took.
+        </p>
+        <p>
+        ------------------------------------------------------------------
+        </p> 
+        <p> 
+            Since Valentines was happening around 
+            the corner, I decided to do something 
+            romantic. This brought me memories to an 
+            old Chinese mythology about the red 
+            string of fate. Legend has it that there 
+            is a deity that connects fated couples 
+            together with a red string.
+        </p>
+        <p>
+            ------------------------------------------------------------------
+            </p> 
+            <p> 
+                I was watching Loki and the idea of 
+                mobius stuck to my mind, so I made the 
+                red strings into a mobius loop to 
+                symbolize eternal love
+            </p>
+            <p>
+              ---------------------------------
+              </p>  
+      </div>
+      <div class="project_display" style="display: flex; align-items: flex-start; gap: 10px; flex-wrap: nowrap; width: 100%;">
+        <div class="stacked-images" style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+          <img src="Photos/dyptych/step1_1.png" alt="Project Image 1" style="width: 20%; height: auto; transform: translateX(150px);">
+          <img src="Photos/dyptych/step1_2.png" alt="Project Image 2" style="width: 40%; height: auto; transform: translateX(250px);">
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="project_display" style="display: flex; flex-direction: row; justify-content: center; gap: 10px;">
+        <img src="Photos/dyptych/Step2_1.png" alt="Project Image 2" style="width:33%; height:100;">
+        <img src="Photos/dyptych/step2_2.png" alt="Project Image 3" style="width:33%; height:100%;">
+      </div>
+      <div class="project_description2">
+        <h3>Step 2</h3>
+        <p>
+          ---------------------------------
+          </p> 
+        <p>
+            However, this scene just didn’t look 
+            good. The mobius loop was awkwardly 
+            placed into the poster and the ground 
+            looked really fake and too fantasy for 
+            a modern day setting.
+        </p>
+        <p>
+        ------------------------------------------------------------------
+        </p> 
+        <p> 
+            To help blend everything better, I gave 
+            up on the mobius loop idea. Instead, I 
+            replaced it with red string flying 
+            around a couple and connecting them 
+            into heaven. This new idea filled all the 
+            empty spaces around the subject and 
+            just looked incredibe.
+        </p>
+          <p>
+            ------------------------------------------------------------------
+            </p> 
+            <p> 
+                The ground was changed to a rooftop to 
+                retain a sense of realism in the modern 
+                setting.
+            </p>
+            <p>
+              ---------------------------------
+              </p> 
+      </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="project_description">
+        <h3>Step 3</h3>
+        <p>
+          ---------------------------------
+          </p> 
+        <p>
+            But something was still missing. This 
+            project is supposed to be a diptych 
+            poster, so there should be something to 
+            connect these posters together.
+        </p>
+        <p>
+        ------------------------------------------------------------------
+        </p> 
+        <p> 
+            Searching back into my cultural 
+            database, I realized that there was 
+            something that would perfectly fit that 
+            criteria.: “a couplet”. Couplets are 
+            mostly used to put on doors during new 
+            years for good luck.  One such couplet, is 
+            poem about the red string of fate.
+        </p>
+          <p>
+            ------------------------------------------------------------------
+            </p> 
+            <p> 
+                So I added them in to create my final 
+                poster.
+            </p>
+            <p>
+              ---------------------------------
+              </p> 
+      </div>
+      <div class="project_display" style="display: flex; align-items: flex-start; gap: 10px; flex-wrap: nowrap; width: 100%;">
+        <div class="stacked-images" style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+          <img src="Photos/dyptych/step3_1.png" alt="Project Image 1" style="width: 40%; height: auto; transform: translateX(100px);">
+          <img src="Photos/dyptych/step3_2.png" alt="Project Image 2" style="width: 50%; height: auto; transform: translateX(250px);">
+        </div>
+      </div>
+    </div>
+    <h5> Result </h5>
+    <div class="middle-column">
+      <img src="Photos/dyptych/dyptych_left.jpg" alt="Result Image 1">
+      <img src="Photos/dyptych/dyptych_right.jpg" alt="Result Image 2">
+    </div>
+  </body>
+</html>

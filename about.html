@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        margin: 0;
+        font-family: 'Special Elite', cursive;
+        background-color: #333;
+        color: #fff;
+      }
+
+      p {
+        color: #20C20E;
+      }
+
+      p::before {
+        content: "";
+        position: absolute;
+        top: 23%;
+        left: 11%;
+        width: 6%;
+        height: 5%;
+        background: black;
+        filter: blur(20px);
+        z-index: -1;
+      }
+    
+      h6 {
+        font-size: 15px;
+        color: #20C20E;
+        text-align: left;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      p::before {
+        content: "";
+        position: absolute;
+        top: 77%;
+        left: 25%;
+        width: 45%;
+        height: 7%;
+        background: black;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      h1 {
+        font-size: 96px;
+        color: #20C20E;
+      }
+
+      h1::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+        height: 55%;
+        background: black;
+        filter: blur(75px);
+        z-index: -1;
+      }
+
+      h2 {
+        font-size: 100px;
+        color: #20C20E;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      h3 {
+        font-size: 75px;
+        color: #20C20E;
+        text-align: center;
+        margin-top: -100px;
+        position: relative;
+      }
+
+      h3::before {
+        content: "";
+        position: absolute;
+        top: 65%;
+        left: 25%;
+        width: 50%;
+        height: 15%;
+        background: black;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      h4 {
+        font-size: 125px;
+        color: #20C20E;
+        text-align: center;
+        position: relative;
+      }
+
+      h4::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 5%;
+        width: 90%;
+        height: 130%;
+        background: black;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      h5 {
+        font-size: 50px;
+        color: black;
+        text-align: center;
+        position: relative;
+      }
+
+      h5::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 20%;
+        width: 60%;
+        height: 150%;
+        background: #20C20E;
+        filter: blur(30px);
+        z-index: -1;
+      }
+      
+      /* Navigation bar styles */
+      nav {
+        background-color: black;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline-block;
+      }
+
+      nav li a {
+        display: inline-block;
+        color: #20C20E;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav li a:hover {
+        background-color: #111;
+      }
+
+      /* Video Background Styles */
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Two-column Contact Section */
+      .contact-columns {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 40px auto;
+        align-items: stretch; /* ensures both grid items fill the row height */
+        }
+
+/* Remove shared flex alignment so each column can be styled individually */
+    .column_1 {
+        padding: 20px;
+        text-align: left;
+        margin-top: 50px;
+        }
+
+    .column_2 {
+        padding: 20px;
+        text-align: left;
+        }
+        .middle-image {
+  width: 500px;         /* Set a fixed square size */
+  height: 500px;        /* Make the container a square */
+  max-width: 100%;      /* Responsive scale if needed */
+  margin: 100px auto;    /* Center the container */
+  border-radius: 50%;   /* Make the container circular */
+  overflow: hidden;     /* Hide any overflow so the image stays within the circle */
+}
+
+.middle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Ensure the image covers the container without distortion */
+  display: block;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="/Videos/hacker_background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Two-Column Contact Section -->
+    <div class="contact-columns">
+        <div class="column_1">
+          <p>About Me</p>
+        </div>
+        <div class="column_2">
+          <h1>I’m a Multicultural Designer in Canada</h1>
+          <h6>Inspired by East Asian and Western cultures,  y designs are visually captivating,</h6>
+        <h6>My designs are visually captivating, while resonate with a global audience.</h6>
+        </div>
+      </div>
+      
+      <div class="middle-image">
+        <img src="Photos/portrait/portrait_crt.png" alt="Portrait">
+      </div>
+    
+    <h5>Connect into My World</h5>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=h48wuu@gmail.com">
+        <h4>h48wuu@gmail.com</h4>
+      </a>
+    <h3>(437) 838 3302</h3>
+  </body>
+</html>
