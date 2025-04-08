@@ -148,7 +148,7 @@ const projectMesh = createCurvedVideoMesh(
 const loader = new GLTFLoader();
 
 // CRT TV model
-loader.load('models/crt_tv_gltf/scene.gltf', function (gltf) {
+loader.load('Models/crt_tv_gltf/scene.gltf', function (gltf) {
   gltf.scene.position.set(0, -3, 0);
   gltf.scene.scale.set(0.1, 0.1, 0.1);
   scene.add(gltf.scene);
@@ -157,7 +157,7 @@ loader.load('models/crt_tv_gltf/scene.gltf', function (gltf) {
 });
 
 // 1970s vintage television model
-loader.load('models/1970s_vintage_television_gltf/scene.gltf', function (gltf) {
+loader.load('Models/1970s_vintage_television_gltf/scene.gltf', function (gltf) {
   gltf.scene.position.set(-4.8, -3, -0.5);
   gltf.scene.scale.set(0.3, 0.3, 0.3);
   gltf.scene.rotation.y = 0.3;
@@ -167,7 +167,7 @@ loader.load('models/1970s_vintage_television_gltf/scene.gltf', function (gltf) {
 });
 
 // Old Russian TV model
-loader.load('models/old_russian_tv_gltf/scene.gltf', function (gltf) {
+loader.load('Models/old_russian_tv_gltf/scene.gltf', function (gltf) {
   gltf.scene.position.set(5, -1, -0.5);
   gltf.scene.scale.set(9, 9, 9);
   gltf.scene.rotation.y = -0.3;
@@ -177,7 +177,7 @@ loader.load('models/old_russian_tv_gltf/scene.gltf', function (gltf) {
 });
 
 // TV with embedded textures model
-loader.load('models/tv_embeddedtextures_gltf/scene.gltf', function (gltf) {
+loader.load('Models/tv_embeddedtextures_gltf/scene.gltf', function (gltf) {
   gltf.scene.position.set(-2, -1, -0.5);
   gltf.scene.scale.set(2, 2, 2);
   gltf.scene.rotation.y = 0.2;
