@@ -130,17 +130,6 @@ const hackerMesh = createCurvedVideoMesh(
 );
 scene.add(hackerMesh);
 
-/*
-// Create hacker video overlay 2
-const hackerMesh2 = createCurvedVideoMesh(
-  'Videos/hacker_screen.mp4',
-  [-3, 3, 0],
-  [0, 0.3, 0],
-  [1, 1, 1],
-);
-scene.add(hackerMesh2);
-*/
-
 // Create hacker video mesh
 const projectMesh = createCurvedVideoMesh(
     'Videos/Projects.mp4',
