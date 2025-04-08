@@ -16,7 +16,7 @@
         font-size: 50px;
         color: #FFFFFF;
         width: 333px;
-        height: 200px;
+        height: 110px;
         background-color: transparent;
         position: fixed;
         top: 12%;
@@ -36,6 +36,34 @@
         background-color: transparent;
         cursor: pointer;
       }
+      
+      nav {
+        background-color: black;
+        overflow: hidden;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline-block;
+      }
+
+      nav li a {
+        display: inline-block;
+        color: #20C20E;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav li a:hover {
+        background-color: #111;
+      }
 
       /* Responsive adjustments for mobile view */
       @media (max-width: 768px) {
@@ -54,6 +82,16 @@
       </script>
   </head>
   <body>
+    <div class="nav-wrapper">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
     <div class="project_title">
       <p>My Projects</p>
     </div>

@@ -230,7 +230,11 @@ scene.add(topLight);
 // ---------------- OrbitControls & Render Loop ----------------
 
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enabled = false;
+
+/*
 controls.enableDamping = true;
+*/
 
 function animate() {
   requestAnimationFrame(animate);
