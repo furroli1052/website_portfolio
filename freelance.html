@@ -32,10 +32,10 @@
         z-index: -1;
       }
       
-      /* Navigation bar styles */
+        /* Navigation bar styles */
       nav {
         background-color: black;
-        overflow: hidden;
+        overflow: visible;
         margin-top: 30px;
       }
 
@@ -61,6 +61,38 @@
       nav li a:hover {
         background-color: #111;
       }
+
+      nav li.dropdown {
+      position: relative;
+    }
+
+    nav li .dropdown-content {
+      text-align: left;
+      display: none;
+      position: absolute;
+      top: 100%;           /* right below its parent <li> */
+      left: 0;
+      min-width: 10em;     /* adapt as needed */
+      background: black;
+      border: 1px solid black;
+      z-index: 1000;       /* on top of everything */
+      font-size: 15px;
+    }
+    nav li.dropdown:hover .dropdown-content {
+      display: block;
+    }
+    nav li .dropdown-content li a {
+      display: block;
+      padding: 0.5em 1em;
+      color: #20C20E;
+      text-align: left;
+      white-space: nowrap;
+    }
+    nav li .dropdown-content li a:hover {
+      background: #444;
+      color: #fff;
+    }
+
 
       /* Video Background Styles */
       .video-container {
@@ -120,7 +152,17 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="project.html">Projects</a></li>
+        <li class="dropdown">
+          <a class="dropbtn">Projects ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="graphic_design.html">Graphic Design</a></li>
+            <li><a href="rebrand.html">Rebrand</a></li>
+            <li><a href="website_design.html">Web Design</a></li>
+            <li><a href="ux_design.html">UX Design</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="video_editing.html">Video Editing</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
