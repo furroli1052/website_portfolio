@@ -75,16 +75,17 @@
       z-index: 1;
     }
     .clickable-square {
-      width: 400px;
-      height: 250px;
-      position: fixed;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: transparent;
-      cursor: pointer;
-      z-index: 1;
-    }
+  position: fixed;               /* ← make it fixed to the viewport */
+  top: 55%;                      /* adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
     #particle-overlay,
     #particle-overlay_2 {
       position: fixed;
